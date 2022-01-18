@@ -6,7 +6,7 @@ function HomePage() {
     <>
       <h1>Hello, Bootcamper</h1>
       <h3>You're on week x</h3>
-      <ourCalendar />
+      {/*<ourCalendar />*/}
     </>
   );
 }
