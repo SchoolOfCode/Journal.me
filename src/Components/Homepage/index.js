@@ -3,11 +3,12 @@ import MyCalender from "../Calender";
 
 function HomePage() {
   return (
-    <>
-      <h1>Hello, Bootcamper (put name here maybe?)</h1>
+    <div>
+      <h1> Hello, Bootcamper</h1>
+      {/* (put name here maybe?) */}
       <h3>You're on week x</h3>
       <MyCalender />
-    </>
+    </div>
   );
 }
 

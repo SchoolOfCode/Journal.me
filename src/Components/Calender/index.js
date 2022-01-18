@@ -3,7 +3,7 @@ import Calendar from "react-calendar";
 import "react-calendar/dist/Calendar.css";
 import moment from "moment";
 
-function MyCalendar() {
+function MyCalender() {
   const [date, setDate] = useState(new Date());
 
   function changeDate(event) {
@@ -18,4 +18,4 @@ function MyCalendar() {
   );
 }
 
-export default MyCalendar;
+export default MyCalender;
