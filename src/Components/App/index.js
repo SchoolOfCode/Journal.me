@@ -1,18 +1,15 @@
 import React from "react";
-import "./App.css";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-
-import Layout from "../Layout"
-import Homepage from "../Homepage"
-import Dayview from "../Dayview"
-import ToDoList from "../ToDoList"
 
 
 
-function App() {
+
+export default function App() {
+
+
+
   return (
     <div className="App">
-{<BrowserRouter>
+<BrowserRouter>
         <Routes>
           {/* Layout will have an ul inside a nav tag with Links to ToDoList and Homepage */}
           <route path="/" element={<Layout />} /> 
@@ -24,9 +21,10 @@ function App() {
             <route path="GlobalToDoList" element={<ToDoList />} />
           </route>
         </Routes>
-      </BrowserRouter> */}
+      </BrowserRouter> 
     </div> 
   );
+
 }
 
 
