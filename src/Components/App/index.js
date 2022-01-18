@@ -4,8 +4,8 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import Layout from "../Layout";
 import Homepage from "../Homepage";
-import Dayview from "../Dayview";
-import ToDoList from "../ToDoList";
+/* import Dayview from "../Dayview";
+import ToDoList from "../ToDoList"; */
 
 function App() {
   return (
@@ -17,9 +17,9 @@ function App() {
           {/* Homepage will have h1 Hello bootcamper, h2 You're on week x, and the calander*/}
           <route index element={<Homepage />}>
             {/* Day view will have Mood tracker component and Journal component */}
-            <route path="journal" element={<Dayview />} />
+            {/* <route path="journal" element={<Dayview />} /> */}
             {/* Make a to-do list */}
-            <route path="todolist" element={<ToDoList />} />
+            {/*  <route path="todolist" element={<ToDoList />} /> */}
           </route>
         </Routes>
       </BrowserRouter>
