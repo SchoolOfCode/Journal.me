@@ -1,6 +1,14 @@
 import React from "react";
 
 
+// import Layout from "../Layout"
+// import Homepage from "../Homepage"
+// import Dayview from "../Dayview"
+// import ToDoList from "../ToDoList"
+
+
+
+
 
 
 export default function App() {
@@ -9,6 +17,7 @@ export default function App() {
 
   return (
     <div className="App">
+
 <BrowserRouter>
         <Routes>
           {/* Layout will have an ul inside a nav tag with Links to ToDoList and Homepage */}
@@ -22,6 +31,7 @@ export default function App() {
           </route>
         </Routes>
       </BrowserRouter> 
+
     </div> 
   );
 
@@ -30,5 +40,5 @@ export default function App() {
 
 
 
-export default App;
+
 
