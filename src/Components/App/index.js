@@ -6,11 +6,12 @@ import "./App.css";
 // import Homepage from "../Homepage"
 // import Dayview from "../Dayview"
 // import ToDoList from "../ToDoList"
+import ToDoList from "../ToDoList";
 
 function App() {
   return (
     <div className="App">
-        <h1>Hello world</h1>
+        <ToDoList />
     </div> 
   );
 }
