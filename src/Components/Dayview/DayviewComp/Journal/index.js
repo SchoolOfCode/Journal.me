@@ -1,24 +1,39 @@
-import React, {useState, useReducer} from "react";
+import React, { useReducer } from "react";
+import { actions, reduceFormData } from "../libs/actions.js";
 
 
+export default function Journal() {
+    
+  const [formData, formDataDispatch] = useReducer(reduceFormData, {
+    title: "",
+    body: "",
+  });
 
-export default function Journal(){
+  return (
+    // function handleClick({target : self}){
 
-    const [formData, formDataDispatch] = useReducer(reduceFormData, )
-
-    return(
-
-        function handleClick({target : self}){
-            
-        }
+    // }
 
     <form>
-      <input placeholder="Title" onChange={}/>
-      <input placeholder="Body" onChange={}/>
-      <button onClick={(e)=>{
-          e.preventDefault()
-          handleClick(e)}}>Submit</button>
-
-     </form>
-    )
+      <input
+        placeholder="Title"
+        onChange={e => {
+          formDataDispatch({ type: actions.TITLE, value: e.target.value });
+        }}
+      />
+      <input
+        placeholder="Body"
+        onChange={e => {
+          formDataDispatch({ type: actions.BODY, value: e.target.value });
+        }}
+      />
+      <button
+        onClick={e => {
+          e.preventDefault();
+        }}
+      >
+        Submit
+      </button>
+    </form>
+  );
 }
