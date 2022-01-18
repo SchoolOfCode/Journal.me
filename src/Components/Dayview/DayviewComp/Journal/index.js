@@ -15,6 +15,7 @@ export default function Journal() {
     // }
 
     <form>
+      <h1> Our Daily Journal </h1>
       <input
         placeholder="Title"
         onChange={e => {
@@ -27,11 +28,9 @@ export default function Journal() {
           formDataDispatch({ type: actions.BODY, value: e.target.value });
         }}
       />
-      <button
-        onClick={e => {
-          e.preventDefault();
-        }}
-      >
+      <button onClick={e => { e.preventDefault();
+        alert("Working")
+        }}>
         Submit
       </button>
     </form>

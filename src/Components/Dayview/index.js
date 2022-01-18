@@ -8,8 +8,9 @@ export default function Dayview(){
     return(
     <div>
     <Moodtracker />
-    <Journal />   
-     </div>
+    <Journal />  
+    
+     </div> 
     )
 }
 

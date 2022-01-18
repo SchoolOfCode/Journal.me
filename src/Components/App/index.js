@@ -8,12 +8,15 @@ import "./App.css";
 // import ToDoList from "../ToDoList"
 
 import Journal from "../Dayview/DayviewComp/Journal";
+import Moodtracker from "../Dayview/DayviewComp/Moodtracker";
 
 function App() {
   return (
     <div className="App">
+      <Moodtracker />
       <Journal />
-    </div>
+  
+    </div> 
   );
 }
 
