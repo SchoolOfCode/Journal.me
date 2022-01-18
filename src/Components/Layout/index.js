@@ -15,10 +15,6 @@ const Layout = () => {
             <Link to="/dayview">Day view</Link>
           </li>
 
-      
-
-
-
         </ul>
       </nav>
 
