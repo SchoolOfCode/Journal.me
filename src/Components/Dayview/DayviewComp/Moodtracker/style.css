@@ -1,18 +1,15 @@
- div {
-    color: rgb(0, 38, 255);
-    margin: 0, auto;
-    display: block;
-    text-align: center;
+div {
+  color: rgb(0, 38, 255);
+  margin: 0, auto;
+  display: block;
+  text-align: center;
+}
 
- }
+span {
+  display: flex;
+  justify-content: center;
+}
 
- span {
-    display: flex;
-    justify-content: center;
-  }
-
-  button {
-    font-size: 50px;
-  }
-
- 
+button {
+  font-size: 30spx;
+}

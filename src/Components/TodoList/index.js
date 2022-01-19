@@ -1,5 +1,4 @@
 import React, {useReducer, useState} from "react";
-import"./style.css"
 
 const actions  ={
     ADD_TO_LIST:"ADD_TO_LIST",
@@ -38,7 +37,7 @@ export default function ToDoList() {
 
 
   return (
-    <div className= "todo-list">
+    <div>
       <input value={input} onChange ={({target : self})=>{
             setInput(self.value)
       }}placeholder="Add a to-do"/>
