@@ -7,13 +7,14 @@ const Layout = () => {
       <nav className="nav-bar">
         <ul className="nav-bar-items">
           <li>
-            <Link to="/">Home</Link>
+            <Link to="/"> Home 🏠 </Link>
           </li>
           <li>
-            <Link to="/dayview">Daily Journal</Link>
+        
+            <Link to="/dayview">Daily Journal 📓 </Link>
           </li>
           <li>
-            <Link to="/todolist">To-Do List</Link>
+            <Link to="/todolist">To-Do List 📋 </Link>
           </li>
         </ul>
       </nav>

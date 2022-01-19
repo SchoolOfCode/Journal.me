@@ -11,7 +11,7 @@ function MyCalender() {
   }
 
   return (
-    <div>
+    <div className>
       <Calendar onChange={changeDate} value={date} />
       <p>You have selected: {moment(date).format("MMMM Do YYYY")}</p>
     </div>

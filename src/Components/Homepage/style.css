@@ -1,10 +1,20 @@
+
+
 .home-page {
-  color: red;
+  color: rgb(0, 38, 255);
   margin: 0, auto;
   display: block;
   text-align: center;
+  
+
 }
 
 body {
-  background-color: wheat;
+  background-color: rgb(140, 243, 217);
+
+}
+
+span {
+  display: flex;
+  justify-content: center;
 }
