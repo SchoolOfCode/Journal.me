@@ -1,4 +1,6 @@
 import React, { useState} from "react";
+import "./style.css";
+
 
 
 export default function Moodtracker(){
@@ -10,8 +12,8 @@ export default function Moodtracker(){
 
     return(
     <div>
+        <h1>How Are you feeling Today?</h1>
         <span>
-            <h1>How Are you feeling Today?</h1>
             <button onClick = {(e)=>{ 
                 e.preventDefault()
                 setMood(0)

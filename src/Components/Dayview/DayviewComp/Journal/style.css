@@ -1,0 +1,50 @@
+#textbox-title {
+  width: 50%;
+  font-size: 20px;
+  border-radius: 5px;
+  border-color: black;
+  border-style: ridge;
+  border-width: 1.5px;
+  padding: 20px 42px;
+
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#textbox-body {
+  width: 50%;
+  font-size: 20px;
+  border-radius: 5px;
+  border-color: rgb(3, 41, 252);
+  border-style: ridge;
+  border-width: 1.5px;
+  padding: 15px 32px;
+
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+#submit {
+  background-color: #4caf50; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 20px;
+  width: 20%;
+
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+#journal-input {
+  display: flex;
+  flex-direction: column;
+}
