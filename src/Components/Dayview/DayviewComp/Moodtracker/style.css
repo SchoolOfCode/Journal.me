@@ -1,20 +1,15 @@
-
-
-.home-page {
+div {
   color: rgb(0, 38, 255);
   margin: 0, auto;
   display: block;
   text-align: center;
-  
-
-}
-
-body {
-  background-color: rgb(140, 243, 217);
-
 }
 
 span {
   display: flex;
   justify-content: center;
+}
+
+button {
+  font-size: 30spx;
 }

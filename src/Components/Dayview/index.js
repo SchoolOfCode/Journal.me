@@ -6,7 +6,7 @@ import Journal from "./DayviewComp/Journal";
 
 export default function Dayview(){
     return(
-    <div>
+    <div className = "daily-journal">
     <Moodtracker />
     <Journal />  
     

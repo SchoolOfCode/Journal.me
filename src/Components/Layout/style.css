@@ -1,0 +1,12 @@
+.nav-bar {
+  background-color: thistle;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-bar-items {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  list-style-type: none;
+}
