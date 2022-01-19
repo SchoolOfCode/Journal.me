@@ -1,20 +1,20 @@
 import { Outlet, Link } from "react-router-dom";
+import "./style.css";
 
 const Layout = () => {
   return (
     <>
-      <nav>
-        <ul>
+      <nav className="nav-bar">
+        <ul className="nav-bar-items">
           <li>
             <Link to="/">Home</Link>
           </li>
           <li>
-            <Link to="/todolist">ToDoList</Link>
+            <Link to="/dayview">Daily Journal</Link>
           </li>
           <li>
-            <Link to="/dayview">Day view</Link>
+            <Link to="/todolist">To-Do List</Link>
           </li>
-
         </ul>
       </nav>
 
