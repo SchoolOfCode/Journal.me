@@ -4,7 +4,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Layout from "../Layout";
 import Homepage from "../Homepage";
 import Dayview from "../Dayview";
-import TodoList from "../TodoList";
+import TodoList from "../ToDoList";
 
 export default function App() {
   const [userId, setUserId] = useState(0);
@@ -26,8 +26,5 @@ export default function App() {
     </div>
   );
 }
-
-
-
 
 //Dev branch Version 0.4
