@@ -8,6 +8,8 @@ import ArrowButton from "./DayviewComp/ArrowButton";
 
 export default function Dayview({selectedDate, userId}){
 
+    //collect date and userId
+
 
   const [isJournalOpen, setIsJournalOpen] = useState(true);
 
