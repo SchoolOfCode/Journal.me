@@ -18,6 +18,14 @@ body {
   padding: 0%;
 }
 
+h1 {
+  font-family: "Mochiy Pop P One", sans-serif;
+}
+
+h3 {
+  font-family: "Oswald", sans-serif;
+}
+
 span {
   display: flex;
   justify-content: center;

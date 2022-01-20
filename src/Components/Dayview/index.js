@@ -3,12 +3,21 @@ import React, { useState } from "react";
 import TodoList from "../TodoList";
 import Moodtracker from "./DayviewComp/Moodtracker";
 import Journal from "./DayviewComp/Journal";
+import DayviewToDoList from "./DayviewComp/Dayview-todolist";
+import ArrowButton from "./DayviewComp/ArrowButton";
 
 export default function Dayview() {
+
   const [isJournalOpen, setIsJournalOpen] = useState(true);
 
   return (
-    <div className="dayviewContainer">
+    <div className="daily-journal">
+    
+    <div className="btn-container">
+        <ArrowButton text="previous" />
+        <h2>date x</h2>
+        <ArrowButton text="next" />
+        </div>
 
 
       <button
@@ -59,6 +68,7 @@ export default function Dayview() {
       ) : (
         <></>
       )}
+
     </div>
   );
 }
