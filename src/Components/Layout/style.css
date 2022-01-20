@@ -1,7 +1,9 @@
 .nav-bar {
-  background-color: thistle;
-  margin: 0;
+  background-color: rgb(162, 218, 253);
+  margin-bottom: 50px;
   padding: 0;
+  text-decoration: none;
+  top: 0px;
 }
 
 .nav-bar-items {
@@ -9,4 +11,6 @@
   flex-direction: row;
   justify-content: space-around;
   list-style-type: none;
+  text-decoration: none;
+  color: black;
 }

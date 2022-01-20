@@ -14,7 +14,7 @@ export default function Journal() {
     // }
 
     <form>
-      <h1> Our Daily Journal </h1>
+      <h1> Your daily journal </h1>
 
       <container id="journal-input">
         <input
