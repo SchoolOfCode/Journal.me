@@ -48,12 +48,12 @@ const Layout = () => {
       </span>
 
       <footer>
-        <p3>Created by:</p3><br/>
-          <p4>Callum Hemming</p4><br/>
-          <p4>Samira Midgley</p4><br/>
-          <p4>Najma Elmi</p4><br/>
-          <p4>Tan Coding</p4><br/>
-        <p3><strong>Copyright@NascarTanTeam</strong></p3>
+        <p5>Created by:</p5><br/>
+          <p5>Callum Hemming</p5><br/>
+          <p5>Samira Midgley</p5><br/>
+          <p5>Najma Elmi</p5><br/>
+          <p5>Tan Coding</p5><br/>
+        <p10><strong>Copyright@NascarTanTeam</strong></p10>
       </footer>
 
       </div>
