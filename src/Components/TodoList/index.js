@@ -1,5 +1,7 @@
 import React, { useReducer, useState } from "react";
+
 import "./style.css";
+
 
 const actions = {
   ADD_TO_LIST: "ADD_TO_LIST",
@@ -33,17 +35,22 @@ export default function ToDoList() {
   const [list, dispatchList] = useReducer(reduceList, ["bacon", "eggs"]);
 
   return (
+
     <div className="todo-list">
       <h3>To-Do List</h3>
+
       <input
         value={input}
         onChange={({ target: self }) => {
           setInput(self.value);
         }}
-        placeholder="I need to..."
+
+        placeholder="Add a to-do"
       />
 
       <button
+        id="add_to_do_button"
+
         onClick={(e) => {
           e.preventDefault();
           dispatchList({ type: actions.ADD_TO_LIST, value: input });
@@ -53,8 +60,7 @@ export default function ToDoList() {
         Add
       </button>
 
-      <button
-        onClick={(e) => {
+      <button id="clear_to_do_button" onClick={(e) => {
           e.preventDefault();
           dispatchList({ type: actions.CLEAR_ALL, value: "" });
         }}
