@@ -1,6 +1,6 @@
 import React from "react";
 import MyCalender from "../Calender";
-import ToDoList from "../TodoList";
+
 import "./style.css";
 
 function HomePage() {
