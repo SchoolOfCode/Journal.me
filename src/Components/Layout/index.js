@@ -46,11 +46,10 @@ const Layout = () => {
 
       <footer>
         <p3>Created by:</p3><br/>
-        <p4>Callum Hemmingway</p4><br/>
-        <p4>Samira Midgley</p4><br/>
-        <p4>Najma Elmi</p4><br/>
-        <p4>Tan Coding</p4><br/>
-        
+          <p4>Callum Hemming</p4><br/>
+          <p4>Samira Midgley</p4><br/>
+          <p4>Najma Elmi</p4><br/>
+          <p4>Tan Coding</p4><br/>
         <p3><strong>Copyright@NascarTanTeam</strong></p3>
       </footer>
 
