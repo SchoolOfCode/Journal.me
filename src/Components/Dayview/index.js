@@ -6,12 +6,14 @@ import Journal from "./DayviewComp/Journal";
 import DayviewToDoList from "./DayviewComp/Dayview-todolist";
 import ArrowButton from "./DayviewComp/ArrowButton";
 
-export default function Dayview() {
+export default function Dayview({selectedDate, userId}){
+
 
   const [isJournalOpen, setIsJournalOpen] = useState(true);
 
   return (
     <div className="daily-journal">
+
     
     <div className="btn-container">
         <ArrowButton text="previous" />

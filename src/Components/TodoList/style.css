@@ -1,13 +1,9 @@
 .todo-list {
-
   color: red;
   margin: 0, auto;
   display: block;
   text-align: center;
   /* font-family: 'Poppins', sans-serif; */
-  margin: 0, auto;
-  display: block;
-  text-align: center;
 }
 
 #add_to_do_button {
