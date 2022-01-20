@@ -3,7 +3,9 @@
   margin-bottom: 50px;
   padding: 0;
   text-decoration: none;
-  top: 0px;
+  top: 10px;
+  /* font-family: "Oswald", sans-serif; */
+  font-size: 20px;
 }
 
 .nav-bar-items {
@@ -15,9 +17,9 @@
   color: black;
 }
 
-
+/* 
 .DayView_nav_bar_font {
-  font-family: "Oswald", sans-serif;
+  
 }
 
 .To_Do_List_nav_bar {
@@ -26,7 +28,7 @@
 
 .Home_nav_bar_font {
   font-family: "Oswald", sans-serif;
-}
+} */
 
 .link {
   border: none;
@@ -34,9 +36,12 @@
   padding: 32px 16px;
   text-align: center;
   text-decoration: none;
-  display: inline-block;
   font-size: 16px;
   border-radius: 50%;
+  display:inline-block;
+  justify-content: space-around;
+  display: flex;
+  flex-direction: row; 
   
 
 }

@@ -10,7 +10,7 @@ export default function Dayview() {
       <div>
         <Moodtracker />
         <Journal />
-        <button addTrip={this.triggerAddTripState}>click me</button>
+        {/* <button addTrip={this.triggerAddTripState}>click me</button> */}
       </div>
       <DayviewToDoList />
     </div>
