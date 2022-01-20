@@ -5,8 +5,8 @@ const Layout = () => {
   return (
     <>
  
-      <nav className="nav-bar">
-        <ul className="nav-bar-items">
+      <nav className="menu">
+        <ul className="menu-items">
           <li>
             <Link to="/" className="Home_nav_bar_font">
               {" "}
