@@ -4,7 +4,7 @@ import "./style.css";
 const actions = {
   ADD_TO_LIST: "ADD_TO_LIST",
   CLEAR_ALL: "CLEAR_ALL",
-  DELETE_THIS_ITEM: "DELETE_THIS_ITEM",
+  // DELETE_THIS_ITEM: "DELETE_THIS_ITEM",
 };
 
 function reduceList(list, action) {
@@ -20,8 +20,8 @@ function reduceList(list, action) {
     case actions.CLEAR_ALL:
       return [];
 
-    case actions.DELETE_THIS_ITEM:
-      return [...list.slice(0, value), ...list.slice(value + 1)];
+    // case actions.DELETE_THIS_ITEM:
+    //   return [...list.slice(0, value), ...list.slice(value + 1)];
 
     default:
       return list;
@@ -34,16 +34,16 @@ export default function DayviewToDoList() {
 
   return (
     <div className="todo-list">
-      <h3>To-Do List</h3>
-      <input
+      <h1>Assignments/Tasks/Chores</h1>
+      <input id="text_input"
         value={input}
         onChange={({ target: self }) => {
           setInput(self.value);
         }}
-        placeholder="I need to..."
+        placeholder="I need to complete..."
       />
 
-      <button
+      <button id="add_to_do_button"
         onClick={(e) => {
           e.preventDefault();
           dispatchList({ type: actions.ADD_TO_LIST, value: input });
@@ -53,7 +53,7 @@ export default function DayviewToDoList() {
         Add
       </button>
 
-      <button
+      <button id="clear_to_do_button"
         onClick={(e) => {
           e.preventDefault();
           dispatchList({ type: actions.CLEAR_ALL, value: "" });
@@ -68,7 +68,8 @@ export default function DayviewToDoList() {
             <span style={{ display: "flex" }}>
               <li>{todo}</li>
               <input type="checkbox" />
-              <button
+
+              {/* <button
                 onClick={(e) => {
                   e.preventDefault();
                   dispatchList({
@@ -78,7 +79,7 @@ export default function DayviewToDoList() {
                 }}
               >
                 🪓
-              </button>
+              </button> */}
             </span>
           );
         })}

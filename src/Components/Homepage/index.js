@@ -8,7 +8,7 @@ function HomePage() {
     <div className="home-page">
       <h1> Hello, Bootcamper</h1>
       {/* (put name here maybe?) */}
-      <h3>You're on week x</h3>
+      <h2>You're on week</h2><input/>
       <span style={{display:"flex"}}>
       <MyCalender />
       </span>
