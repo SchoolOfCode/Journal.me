@@ -1,4 +1,10 @@
 .todo-list {
+
+  color: red;
+  margin: 0, auto;
+  display: block;
+  text-align: center;
+  /* font-family: 'Poppins', sans-serif; */
   margin: 0, auto;
   display: block;
   text-align: center;
@@ -17,4 +23,5 @@
   font-family: "Mochiy Pop P One", sans-serif;
   margin-left: 0%;
   margin-right: 5%;
+
 }
