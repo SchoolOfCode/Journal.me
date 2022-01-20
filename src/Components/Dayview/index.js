@@ -5,7 +5,7 @@ import Moodtracker from "./DayviewComp/Moodtracker";
 import Journal from "./DayviewComp/Journal";
 
 export default function Dayview() {
-  const [isJournalOpen, setIsJournalOpen] = useState(false);
+  const [isJournalOpen, setIsJournalOpen] = useState(true);
 
   return (
     <div className="dayviewContainer">
