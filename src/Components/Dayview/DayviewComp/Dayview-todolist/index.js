@@ -28,7 +28,7 @@ function reduceList(list, action) {
   }
 }
 
-export default function ToDoList() {
+export default function DayviewToDoList() {
   const [input, setInput] = useState("");
   const [list, dispatchList] = useReducer(reduceList, ["bacon", "eggs"]);
 
