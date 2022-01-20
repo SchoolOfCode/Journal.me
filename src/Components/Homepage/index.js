@@ -1,6 +1,8 @@
 import React from "react";
 import MyCalender from "../Calender";
+
 import { Outlet, Link } from "react-router-dom";
+
 import "./style.css";
 
 function HomePage({userData, userId, setUserId}) {

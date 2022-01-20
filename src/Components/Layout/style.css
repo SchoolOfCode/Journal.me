@@ -1,12 +1,14 @@
-.nav-bar {
+.menu {
   background-color: rgb(162, 218, 253);
   margin-bottom: 50px;
   padding: 0;
   text-decoration: none;
-  top: 0px;
+  top: 10px;
+  /* font-family: "Oswald", sans-serif; */
+  font-size: 20px;
 }
 
-.nav-bar-items {
+.menu-items {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
@@ -14,3 +16,110 @@
   text-decoration: none;
   color: black;
 }
+
+/* 
+.DayView_nav_bar_font {
+  
+}
+
+.To_Do_List_nav_bar {
+  font-family: "Oswald", sans-serif;
+}
+
+.Home_nav_bar_font {
+  font-family: "Oswald", sans-serif;
+} */
+
+.link {
+  border: none;
+  color: white;
+  padding: 32px 16px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  border-radius: 50%;
+  display:inline-block;
+  justify-content: space-evenly;
+  display: flex;
+  flex-direction: row;  
+
+}
+
+/* Style the links inside the navigation bar */
+.navbar a {
+  float: center;
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 20px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+/* Change the color of links on hover */
+.navbar a:hover {
+  background-color: #ddd;
+  color: blue;
+}
+
+/* Add a color to the active/current link */
+.navbar a.active {
+  background-color: #04AA6D;
+  color: white;
+} -->
+
+#link1 {background-color: #4CAF50;} /* Green */
+#link2 {background-color: #008CBA;} /* Blue */
+#link3 {background-color: #f44336;} /* Red */
+
+p3 {
+  font-size: 15px;
+}
+
+p4 {
+  font-size: 14px;
+}
+
+
+
+
+/* Place the navbar at the bottom of the page, and make it stick */
+.navbar {
+  background-color: rgb(4, 201, 250);
+  overflow: hidden;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  float: center;
+}
+
+/* Style the links inside the navigation bar */
+.navbar a {
+  float: center;
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 20px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+/* Change the color of links on hover */
+.navbar a:hover {
+  background-color: #ddd;
+  color: blue;
+}
+
+/* Add a color to the active/current link */
+.navbar a.active {
+  background-color: #04AA6D;
+  color: white;
+} 
+
+footer {
+  text-align: left;
+  margin-left: 50px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
