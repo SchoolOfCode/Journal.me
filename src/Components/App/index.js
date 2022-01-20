@@ -12,11 +12,16 @@ function reduceUserData(state, actions){
 }
 
 
+// function reduceCurrentDate(state, actions){
+//   return ()
+// }
+
+
 export default function App() {
   const [userId, setUserId] = useState(1);
-  // const [userData, setUserData] = useState({id: 0, name: 'Default', cohort: 0});
-  const [userData, updateUserData]= useReducer(reduceUserData, [{name:""}])
-
+  // const [selectedDate, updateSelectedDate] = useReducer(reduceCurrentDate, [])
+  // const [userData, setUserData] = useState({id: 0, name: 'Default', cohort: 0}); 
+  const [userData, updateUserData]= useReducer(reduceUserData, [{name:""}]) 
 
 
 
