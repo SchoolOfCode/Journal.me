@@ -41,7 +41,7 @@
   text-decoration: none;
   display: inline-block;
   font-size: 20px;
-  width: 15%;
+  width: 20%;
   font-weight: bold;
 
   display: block;
@@ -55,4 +55,14 @@
 #journal-input {
   display: flex;
   flex-direction: column;
+}
+
+h1 {
+  font-family: "Oswald", sans-serif;
+  font-size: 300%;
+}
+
+.content-box {
+  box-sizing: content-box;
+  height: 100px;
 }

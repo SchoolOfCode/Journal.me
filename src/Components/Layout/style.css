@@ -14,3 +14,15 @@
   text-decoration: none;
   color: black;
 }
+
+.DayView_nav_bar_font {
+  font-family: "Oswald", sans-serif;
+}
+
+.To_Do_List_nav_bar {
+  font-family: "Oswald", sans-serif;
+}
+
+.Home_nav_bar_font {
+  font-family: "Oswald", sans-serif;
+}

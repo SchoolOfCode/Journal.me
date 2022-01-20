@@ -3,5 +3,19 @@
   margin: 0, auto;
   display: block;
   text-align: center;
-  /* font-family: 'Poppins', sans-serif; */
+}
+
+#add_to_do_button {
+  font-size: large;
+  font-family: "Mochiy Pop P One", sans-serif;
+  margin-left: 5%;
+  margin-right: 3%;
+}
+
+#clear_to_do_button {
+  background-color: rgb(197, 32, 32);
+  font-size: large;
+  font-family: "Mochiy Pop P One", sans-serif;
+  margin-left: 0%;
+  margin-right: 5%;
 }
