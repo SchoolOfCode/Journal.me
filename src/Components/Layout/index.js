@@ -27,20 +27,23 @@ const Layout = () => {
       </nav>
 
 
-      <Outlet />
+      <Outlet/>
 
       <div className="navbar">
       <span className = "link">
-      <button id= "link1" href="https://vimeo.com/showcase/soc-national" >
-      Vimeo
+      <button id= "link1"
+      href="https://vimeo.com/showcase/soc-national" >
+        Vimeo
       </button> 
 
-      <button id= "link2" href="https://www.notion.so/" >
-      Notion
+      <button id= "link2" 
+      href="https://www.notion.so/" >
+        Notion
       </button> 
 
-      <button id= "link3" href="https://zoom.us/signin" >
-      Zoom
+      <button id= "link3" 
+      href="https://zoom.us/signin" >
+        Zoom
       </button> 
       </span>
 

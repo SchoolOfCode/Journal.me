@@ -34,12 +34,12 @@
 
 .link {
   border: none;
-  color: white;
-  padding: 32px 16px;
+  /* color: white; */
+  padding: 10px 16px;
   text-align: center;
-  text-decoration: none;
-  font-size: 16px;
-  border-radius: 50%;
+  /* text-decoration: none; */
+  font-size: 50px;
+  /* border-radius: 10%; */
   display:inline-block;
   justify-content: space-evenly;
   display: flex;
@@ -47,43 +47,34 @@
 
 }
 
-/* Style the links inside the navigation bar */
-.navbar a {
-  float: center;
-  display: block;
-  color: black;
-  text-align: center;
-  padding: 20px 16px;
-  text-decoration: none;
-  font-size: 17px;
-}
-
-/* Change the color of links on hover */
-.navbar a:hover {
-  background-color: #ddd;
-  color: blue;
-}
-
-/* Add a color to the active/current link */
-.navbar a.active {
-  background-color: #04AA6D;
+#link1 {
+  background-color: #090dfc;
   color: white;
-} -->
-
-#link1 {background-color: #4CAF50;} /* Green */
-#link2 {background-color: #008CBA;} /* Blue */
-#link3 {background-color: #f44336;} /* Red */
+  border-radius: 12px;
+  padding: 5px 20px;
+} /* Green */
+#link2 {
+  background-color: #090dfc;
+  color: white;
+  border-radius: 12px;
+  padding:5px 20px;
+} /* Blue */
+#link3 {
+  background-color: #090dfc;
+  color: white;
+  border-radius: 12px;
+  padding: 5px 20px;
+} /* Red */
 
 p3 {
   font-size: 12px;
+  text-size-adjust: auto;
 }
 
 p4 {
   font-size: 10px;
+  text-size-adjust: auto;
 }
-
-
-
 
 /* Place the navbar at the bottom of the page, and make it stick */
 .navbar {
@@ -122,6 +113,6 @@ footer {
   text-align: left;
   margin-left: 50px;
   margin-bottom: 20px;
-  margin-top: 20px;
+  margin-top: 0px;
 }
 
