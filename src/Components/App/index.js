@@ -19,7 +19,7 @@ function reduceUserData(state, actions){
 
 export default function App() {
   const [userId, setUserId] = useState(1);
-  // const [selectedDate, updateSelectedDate] = useReducer(reduceCurrentDate, [])
+  const [selectedDate, setSelectedDate] = useState("190122")
   // const [userData, setUserData] = useState({id: 0, name: 'Default', cohort: 0}); 
   const [userData, updateUserData]= useReducer(reduceUserData, [{name:""}]) 
 
@@ -40,7 +40,7 @@ export default function App() {
 
 
   useEffect(()=>{
-    console.log(userData)
+    console.log(userId)
   },[userData])
 
   return (
@@ -52,7 +52,7 @@ export default function App() {
             {/* Homepage will have h1 Hello bootcamper, h2 You're on week x, and the calander*/}
             <Route index element={<Homepage userData={userData} userId={userData} setUserId={setUserId} />} />
             {/* Day view will have Mood tracker component and Journal component */}
-            <Route path="dayview" element={<Dayview />} />
+            <Route path="dayview" element={<Dayview selectedDate={selectedDate} />} />
             {/* Make a to-do list */}
             <Route path="todolist" element={<TodoList />} />
           </Route>
