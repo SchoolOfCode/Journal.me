@@ -1,7 +1,5 @@
 import React, { useReducer, useState } from "react";
-
 import "./style.css";
-
 
 const actions = {
   ADD_TO_LIST: "ADD_TO_LIST",
@@ -30,27 +28,22 @@ function reduceList(list, action) {
   }
 }
 
-export default function ToDoList() {
+export default function DayviewToDoList() {
   const [input, setInput] = useState("");
   const [list, dispatchList] = useReducer(reduceList, ["bacon", "eggs"]);
 
   return (
-
     <div className="todo-list">
       <h3>To-Do List</h3>
-
       <input
         value={input}
         onChange={({ target: self }) => {
           setInput(self.value);
         }}
-
-        placeholder="Add a to-do"
+        placeholder="I need to..."
       />
 
       <button
-        id="add_to_do_button"
-
         onClick={(e) => {
           e.preventDefault();
           dispatchList({ type: actions.ADD_TO_LIST, value: input });
@@ -60,7 +53,8 @@ export default function ToDoList() {
         Add
       </button>
 
-      <button id="clear_to_do_button" onClick={(e) => {
+      <button
+        onClick={(e) => {
           e.preventDefault();
           dispatchList({ type: actions.CLEAR_ALL, value: "" });
         }}

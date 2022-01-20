@@ -10,13 +10,14 @@ export default function Moodtracker() {
 
   return (
     <div className="mood">
-      <h1>How are you feeling today?</h1>
+      <h2 id="mood_tracker_text">How are you feeling today?</h2>
       <span>
         <button
           className="mood-btn"
           onClick={(e) => {
             e.preventDefault();
             setMood(0);
+           
           }}
         >
           👿
