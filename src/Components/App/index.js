@@ -27,4 +27,4 @@ export default function App() {
   );
 }
 
-//Dev branch Version 0.6
+//Updated fetch requests 
