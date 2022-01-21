@@ -19,13 +19,7 @@ const Layout = () => {
               Daily Journal 📓{" "}
             </Link>
           </li>
-          <li>
-            <Link to="/todolist" className="btn">
-              {" "}
-              {/* To_Do_List_nav_bar */}
-              To-Do List 📋{" "}
-            </Link>
-          </li>
+          
         </ul>
       </nav>
 
@@ -34,17 +28,27 @@ const Layout = () => {
       <div className="navbar">
 
       <span className = "link">
-      <button id= "link1" href="https://vimeo.com/showcase/soc-national" >
+
+        <a href="https://vimeo.com/showcase/soc-national">
+        <button id= "link1"  >
       Vimeo
       </button> 
 
-      <button id= "link2" href="https://www.notion.so/" >
+        </a>
+   
+        <a href="https://www.notion.so/">
+      <button id= "link2" >
       Notion
       </button> 
+      </a>
 
-      <button id= "link3" href="https://zoom.us/signin" >
+
+
+      <a href="https://zoom.us/signin">
+      <button id= "link3"  >
       Zoom
-      </button> 
+      </button>
+      </a> 
       </span>
 
       <footer>

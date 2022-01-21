@@ -6,6 +6,11 @@ import Homepage from "../Homepage";
 import Dayview from "../Dayview";
 import TodoList from "../TodoList";
 
+function reduceUserData(state, actions){
+  //console.log(actions.userId)
+  return actions.newState
+}
+
 
 export default function App() {
   const [currentId, setCurrentId] = useState(1);
