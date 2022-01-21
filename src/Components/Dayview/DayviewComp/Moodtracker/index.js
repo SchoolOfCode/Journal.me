@@ -17,7 +17,6 @@ export default function Moodtracker() {
           onClick={(e) => {
             e.preventDefault();
             setMood(0);
-           
           }}
         >
           👿

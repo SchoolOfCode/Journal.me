@@ -11,6 +11,7 @@ function HomePage({selectedDate, setSelectedDate, userData, currentId, setCurren
 
   return (
     <div className="home-page">
+
       <h1> Hello, {userData[0].name}</h1> 
 
       {/* Dev Tools remove before merging to main */}
@@ -48,6 +49,7 @@ function HomePage({selectedDate, setSelectedDate, userData, currentId, setCurren
       <h3>You're on week x</h3>
       <span style={{display:"flex"}}>
       <MyCalender setNicleyFormattedDate={setNicleyFormattedDate} setSelectedDate={setSelectedDate}/>
+
       </span>
     </div>
   );

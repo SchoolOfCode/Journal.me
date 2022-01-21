@@ -11,14 +11,16 @@ span {
 }
 
 .mood-btn {
-  font-size: 50px;
-  width: 80px;
+  font-size: 36px;
+  width: 90px;
+  height: 60px;
   background-color: cadetblue;
   /*change background of mood buttons*/
 }
 
 #mood_tracker_text {
   font-family: "Tajawal", sans-serif;
+  font-size: 30px;
 }
 
 /* button {
@@ -26,9 +28,9 @@ span {
 } */
 
 .mood {
-  margin-bottom: 60px;
-}
-
-h1 {
   margin-bottom: 40px;
 }
+
+/* h2 {
+  margin-bottom: 40px;
+} */

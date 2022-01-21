@@ -7,17 +7,6 @@ import Dayview from "../Dayview";
 import TodoList from "../TodoList";
 
 
-function reduceUserData(state, actions){
-  //console.log(actions.userId)
-  return actions.newState
-}
-
-
-// function reduceCurrentDate(state, actions){
-//   return ()
-// }
-
-
 export default function App() {
   const [currentId, setCurrentId] = useState(1);
   

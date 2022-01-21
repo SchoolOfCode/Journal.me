@@ -4,32 +4,35 @@ import "./style.css";
 const Layout = () => {
   return (
     <>
- 
       <nav className="menu">
         <ul className="menu-items">
           <li>
-            <Link to="/" className="Home_nav_bar_font">
+            <Link to="/" className="btn">
               {" "}
-              Home 🏠{" "}
+              {/* className="Home_nav_bar_font" */} Home 🏠{" "}
             </Link>
           </li>
           <li>
-            <Link to="/dayview" className="DayView_nav_bar_font">
+            <Link to="/dayview" className="btn">
+              {" "}
+              {/* className="DayView_nav_bar_font */}
               Daily Journal 📓{" "}
             </Link>
           </li>
           <li>
-            <Link to="/todolist" className="To_Do_List_nav_bar">
+            <Link to="/todolist" className="btn">
+              {" "}
+              {/* To_Do_List_nav_bar */}
               To-Do List 📋{" "}
             </Link>
           </li>
         </ul>
       </nav>
 
-
       <Outlet />
 
       <div className="navbar">
+
       <span className = "link">
       <button id= "link1" href="https://vimeo.com/showcase/soc-national" >
       Vimeo
@@ -53,6 +56,7 @@ const Layout = () => {
         
         <p><strong>Copyright@NascarTanTeam</strong></p>
       </footer>
+
 
       </div>
     </>
