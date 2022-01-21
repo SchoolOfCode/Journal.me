@@ -12,19 +12,20 @@ function MyCalender({setSelectedDate, setNicleyFormattedDate}) {
  
   
   
-    const [date, setDate] = useState(new Date());
+    // const [date, setDate] = useState(new Date());
     
-    function changeDate(event) {
-      setDate(event);
-    }
+    // function changeDate(event) {
+    //   setDate(event);
+    // }
   
-    function handleClick() {
-      changeDate()
+    // function handleClick(e) {
+    //   // changeDate(e)
+    //   changeDate(e)
      
-      setSelectedDate(String(moment(date).format("DMMYY")))
-      setNicleyFormattedDate(String(moment(date).format("DD-MM-YY")))
-      navigate("/dayview")
-    }
+    //   setSelectedDate(String(moment(date).format("DMMYY")))
+    //   setNicleyFormattedDate(String(moment(date).format("DDMMYY")))
+    //   navigate("/dayview")
+    // }
 
 
  
@@ -33,7 +34,16 @@ function MyCalender({setSelectedDate, setNicleyFormattedDate}) {
 
   return (
     <div className>
-      <Calendar onChange={handleClick} value={date} />
+      <Calendar onClickDay={(date)=>{
+        
+     
+        setSelectedDate(String(moment(date).format("DMMYY")))
+        setNicleyFormattedDate(String(moment(date).format("DD-MM-YYYY")))
+        navigate("/dayview")
+      
+      }
+        
+        }  />
     </div>
   );
 }
