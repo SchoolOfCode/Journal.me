@@ -64,7 +64,7 @@ p {
 /* Place the navbar at the bottom of the page, and make it stick */
 .navbar {
   position: bottom;
-  float: center; */
+  float: center; 
   margin-bottom: 0;
 }
 
