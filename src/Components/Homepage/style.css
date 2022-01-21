@@ -3,6 +3,7 @@
   margin: 0, auto;
   display: block;
   text-align: center;
+  padding-top: 100px;
 }
 
 body {
@@ -16,6 +17,14 @@ body {
   position: relative;
   margin: 0%;
   padding: 0%;
+}
+
+h1 {
+  font-family: "Mochiy Pop P One", sans-serif;
+}
+
+h3 {
+  font-family: "Oswald", sans-serif;
 }
 
 span {

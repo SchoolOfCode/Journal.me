@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./style.css";
 
-export default function Moodtracker() {
+export default function Moodtracker({nicleyFormattedDate}) {
   //make a state called mood
   //set mood to 0
   //handleclick set the state
@@ -10,7 +10,8 @@ export default function Moodtracker() {
 
   return (
     <div className="mood">
-      <h1>How are you feeling today?</h1>
+      <h2 id="mood_tracker_text">How are you feeling today?</h2>
+      <h2>{nicleyFormattedDate}</h2>
       <span>
         <button
           className="mood-btn"

@@ -1,12 +1,15 @@
-import React, { useReducer } from "react";
+import React, { useReducer,useState } from "react";
+import { useSearchParams } from "react-router-dom";
 import { actions, reduceFormData } from "../libs/actions.js";
 import "./style.css";
 
-export default function Journal() {
+export default function Journal({journal}) {
   const [formData, formDataDispatch] = useReducer(reduceFormData, {
     title: "",
     body: "",
   });
+
+  const[test, setTest] = useState("Hello")
 
   return (
     // function handleClick({target : self}){
@@ -15,23 +18,23 @@ export default function Journal() {
 
     <form>
       <h1> Your daily journal </h1>
-
-      <container id="journal-input">
+    
+      <div id="journal-input">
         <input
           id="textbox-title"
-          placeholder="Title"
+          placeholder={journal.title}
           onChange={(e) => {
             formDataDispatch({ type: actions.TITLE, value: e.target.value });
           }}
         />
         <input
           id="textbox-body"
-          placeholder="Body"
+          placeholder={journal.body}
           onChange={(e) => {
             formDataDispatch({ type: actions.BODY, value: e.target.value });
           }}
         />
-      </container>
+      </div>
       <button
         id="submit"
         onClick={(e) => {

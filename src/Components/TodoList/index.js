@@ -1,4 +1,6 @@
-import React, {useReducer, useState} from "react";
+
+import React, {useEffect, useReducer, useState} from "react";
+  import "./style.css";
 
 const actions  ={
     ADD_TO_LIST:"ADD_TO_LIST",
@@ -30,45 +32,76 @@ function reduceList(list, action){
 
 }
 
-export default function ToDoList() {
+export default function ToDoList({todos, nicleyFormattedDate}) {
     const [input, setInput] = useState("")
-    const [list, dispatchList] = useReducer(reduceList, ["bacon","eggs"])
+    const [list, dispatchList] = useReducer(reduceList, [])
+
+
+    useEffect(()=>{
+
+        // console.log(todos)
+        todos.forEach((v)=>{
+            dispatchList({type:actions.ADD_TO_LIST, value:v.item})
+        }
+        )
+    },[todos])
+
 
 
 
   return (
-    <div>
-      <input value={input} onChange ={({target : self})=>{
-            setInput(self.value)
-      }}placeholder="Add a to-do"/>
+    <div className="todo-list">
+      
+      <h1>Assignments/Tasks/Chores</h1>
+      <h2>{nicleyFormattedDate}</h2>
+      <input id="text_input"
+        value={input}
+        onChange={({ target: self }) => {
+          setInput(self.value);
+        }}
+        placeholder="I need to complete..."
+      />
 
-      <button onClick={(e)=>{
-          e.preventDefault()
-          dispatchList({type:actions.ADD_TO_LIST, value:input})
-          setInput("")
-      }}>Add</button>
+      <button id="add_to_do_button"
+        onClick={(e) => {
+          e.preventDefault();
+          dispatchList({ type: actions.ADD_TO_LIST, value: input });
+          setInput("");
+        }}
+      >
+        Add
+      </button>
 
-<button onClick={(e)=>{
-          e.preventDefault()
-          dispatchList({type:actions.CLEAR_ALL, value:""})
-      }}>Clear all</button>
-
-
+      <button id="clear_to_do_button"
+        onClick={(e) => {
+          e.preventDefault();
+          dispatchList({ type: actions.CLEAR_ALL, value: "" });
+        }}
+      >
+        Clear all
+      </button>
 
       <ul>
-        {list.map(function(todo, index){
-            return( <span style={{display:"flex"}}>
-                <li>{todo}</li> 
-                <input type="checkbox" /> 
-                <button onClick={(e)=>{ e.preventDefault()
-                    dispatchList({type:actions.DELETE_THIS_ITEM, value:{index}})}}>🪓</button>
+        {list.map(function (todo, index) {
+          return (
+            <span style={{ display: "flex" }}>
+              <li>{todo}</li>
+              <input type="checkbox" />
 
-
+              {/* <button
+                onClick={(e) => {
+                  e.preventDefault();
+                  dispatchList({
+                    type: actions.DELETE_THIS_ITEM,
+                    value: { index },
+                  });
+                }}
+              >
+                🪓
+              </button> */}
             </span>
-            )
+          );
         })}
-
-
       </ul>
     </div>
   );
