@@ -51,7 +51,7 @@ const Layout = () => {
       </a> 
       </span>
 
-      <footer>
+      {/* <footer>
         <p>Created by:</p><br/>
         <p>Callum Hemming</p><br/>
         <p>Samira Midgley</p><br/>
@@ -59,7 +59,7 @@ const Layout = () => {
         <p>Tan Coding</p><br/>
         
         <p><strong>Copyright@NascarTanTeam</strong></p>
-      </footer>
+      </footer> */}
 
 
       </div>
