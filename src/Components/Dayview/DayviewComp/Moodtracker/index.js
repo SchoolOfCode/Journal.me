@@ -11,7 +11,7 @@ export default function Moodtracker({nicleyFormattedDate}) {
   return (
     <div className="mood">
       <h2 id="mood_tracker_text">How are you feeling today?</h2>
-      <h2>{nicleyFormattedDate}</h2>
+    <h2> {nicleyFormattedDate}</h2>
       <span>
         <button
           className="mood-btn"

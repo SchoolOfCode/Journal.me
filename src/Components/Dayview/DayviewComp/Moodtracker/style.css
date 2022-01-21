@@ -15,7 +15,6 @@ span {
   width: 90px;
   height: 60px;
   background-color: cadetblue;
-  /*change background of mood buttons*/
 }
 
 #mood_tracker_text {
@@ -23,14 +22,7 @@ span {
   font-size: 30px;
 }
 
-/* button {
-  font-size: 30spx;
-} */
-
 .mood {
   margin-bottom: 40px;
 }
 
-/* h2 {
-  margin-bottom: 40px;
-} */

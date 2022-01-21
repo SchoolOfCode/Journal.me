@@ -8,6 +8,7 @@
   font-size: 15px;
   position: fixed;
   width: 100%;
+  position:top;
 }
 
 .menu-items {
@@ -32,6 +33,7 @@
   justify-content: space-evenly;
   display: flex;
   flex-direction: row;
+  margin-bottom: 10px;
 }
 
 #link1 {
@@ -56,16 +58,12 @@
 }
 
 p {
-  /* font-size: 1em; */
   text-size-adjust: auto;
 }
 
 /* Place the navbar at the bottom of the page, and make it stick */
 .navbar {
-  /* background-color: rgb(4, 201, 250); */
-  /* overflow: hidden; */
   position: bottom;
-  /* width: 100%;
   float: center; */
   margin-bottom: 0;
 }
@@ -86,20 +84,6 @@ p {
   background-color: #ddd;
   color: blue;
 }
-
-/* Add a color to the active/current link */
-/* .navbar a.active {
-  background-color: #04aa6d;
-  color: white;
-} */
-/* 
-footer {
-  text-align: left;
-  margin-left: 50px;
-  font-size: 0.5em;
-  margin-bottom: 0.5em;
-  margin-top: 0;
-} */
 
 .btn {
   border-radius: 0px;
