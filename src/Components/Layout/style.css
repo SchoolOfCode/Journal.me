@@ -1,6 +1,6 @@
 .menu {
-  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-  background-color: rgb(162, 218, 253);
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  background-color: rgba(162, 218, 253);
   margin-bottom: 5px;
   padding: 5px;
   text-decoration: none;
@@ -13,7 +13,7 @@
 .menu-items {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-evenly;
   list-style-type: none;
   text-decoration: none;
   color: black;
@@ -26,11 +26,10 @@
   padding: 10px 16px;
   text-align: center;
   font-size: 50px;
-  display:inline-block;
+  display: inline-block;
   justify-content: space-evenly;
   display: flex;
-  flex-direction: row;  
-
+  flex-direction: row;
 }
 
 #link1 {
@@ -44,7 +43,7 @@
   background-color: #090dfc;
   color: white;
   border-radius: 12px;
-  padding:5px 20px;
+  padding: 5px 20px;
 }
 
 #link3 {
@@ -52,7 +51,7 @@
   color: white;
   border-radius: 12px;
   padding: 5px 20px;
-} 
+}
 
 p {
   font-size: 18px;
@@ -93,9 +92,9 @@ p5 {
 
 /* Add a color to the active/current link */
 .navbar a.active {
-  background-color: #04AA6D;
+  background-color: #04aa6d;
   color: white;
-} 
+}
 
 footer {
   text-align: left;
@@ -104,3 +103,6 @@ footer {
   margin-top: 0px;
 }
 
+.btn {
+  border-radius: 10px;
+}

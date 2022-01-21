@@ -59,7 +59,13 @@
 
 h1 {
   font-family: "Oswald", sans-serif;
-  font-size: 300%;
+  font-size: 40px;
+  background-color: rgba(239, 244, 247, 0.616);
+  width: fit-content;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 5px;
 }
 
 .content-box {
