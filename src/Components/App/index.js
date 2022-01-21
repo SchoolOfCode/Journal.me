@@ -27,7 +27,7 @@ export default function App() {
   useEffect(()=>{
 
     
-    fetch(`${process.env.REACT_APP_DATABASE}users/${currentId}`)
+    fetch(`${process.env.REACT_APP_API}users/${currentId}`)
       .then(res=>res.json())
       .then(res=> updateUserData({newState:res.payload})
       //.then(res=>console.log(res.payload))
@@ -61,4 +61,6 @@ export default function App() {
   );
 }
 
-//DEV BRANCH 0.7
+
+//Deploy3.0
+
