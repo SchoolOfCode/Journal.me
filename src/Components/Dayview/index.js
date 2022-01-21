@@ -57,17 +57,15 @@ export default function Dayview({selectedDate, currentId, nicleyFormattedDate}){
   },[journalOfTheDay])
 
   return (
-    <div className="daily-journal">
+    <div className="daily-journal" style={{marginTop:"100px"}}>
 
     
-    <div className="btn-container">
+    {/* <div className="btn-container">
         <ArrowButton text="previous" />
         
         <ArrowButton text="next" />
         </div>
-
-        
-
+ */}
 
       <button
         onClick={e => {
