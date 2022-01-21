@@ -1,36 +1,53 @@
-import React, { useReducer, useState } from "react";
-import "./style.css";
 
-const actions = {
-  ADD_TO_LIST: "ADD_TO_LIST",
-  CLEAR_ALL: "CLEAR_ALL",
-  // DELETE_THIS_ITEM: "DELETE_THIS_ITEM",
-};
+import React, {useEffect, useReducer, useState} from "react";
+  import "./style.css";
 
-function reduceList(list, action) {
-  const { type } = action;
-  const { value } = action;
-  //Remove from list
-  //Cross out list item
+const actions  ={
+    ADD_TO_LIST:"ADD_TO_LIST",
+    CLEAR_ALL:"CLEAR_ALL",
+    DELETE_THIS_ITEM:"DELETE_THIS_ITEM"
 
-  switch (type) {
-    case actions.ADD_TO_LIST:
-      return [...list, value];
-
-    case actions.CLEAR_ALL:
-      return [];
-
-    // case actions.DELETE_THIS_ITEM:
-    //   return [...list.slice(0, value), ...list.slice(value + 1)];
-
-    default:
-      return list;
-  }
 }
 
-export default function DayviewToDoList() {
-  const [input, setInput] = useState("");
-  const [list, dispatchList] = useReducer(reduceList, ["bacon", "eggs"]);
+function reduceList(list, action){
+    const {type} = action 
+    const {value} = action
+//Remove from list
+//Cross out list item
+
+    switch(type){
+        case actions.ADD_TO_LIST:
+        return [...list,value]
+
+        case actions.CLEAR_ALL:
+            return []
+    
+        case actions.DELETE_THIS_ITEM:
+        
+        return [...list.slice(0,value), ...list.slice(value+1)]
+    
+            default:
+        return list
+    }
+
+}
+
+export default function ToDoList({todos}) {
+    const [input, setInput] = useState("")
+    const [list, dispatchList] = useReducer(reduceList, [])
+
+
+    useEffect(()=>{
+
+        // console.log(todos)
+        todos.forEach((v)=>{
+            dispatchList({type:actions.ADD_TO_LIST, value:v.item})
+        }
+        )
+    },[todos])
+
+
+
 
   return (
     <div className="todo-list">

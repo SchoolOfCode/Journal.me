@@ -32,27 +32,32 @@ const Layout = () => {
       <Outlet />
 
       <div className="navbar">
-        <span className="link">
-          <button id="link1" href="https://vimeo.com/showcase/soc-national">
-            Vimeo
-          </button>
 
-          <button id="link2" href="https://www.notion.so/">
-            Notion
-          </button>
+      <span className = "link">
+      <button id= "link1" href="https://vimeo.com/showcase/soc-national" >
+      Vimeo
+      </button> 
 
-          <button id="link3" href="https://zoom.us/signin">
-            Zoom
-          </button>
-        </span>
+      <button id= "link2" href="https://www.notion.so/" >
+      Notion
+      </button> 
 
-        {/* <footer>
-          <p5>Created by:</p5>
-          <p6>Callum Hemming, Samira Midgley, Najma Elmi, Tan Coding</p6>
-          <p10>
-            <strong>Copyright@NascarTanTeam</strong>
-          </p10>
-        </footer> */}
+      <button id= "link3" href="https://zoom.us/signin" >
+      Zoom
+      </button> 
+      </span>
+
+      <footer>
+        <p>Created by:</p><br/>
+        <p>Callum Hemming</p><br/>
+        <p>Samira Midgley</p><br/>
+        <p>Najma Elmi</p><br/>
+        <p>Tan Coding</p><br/>
+        
+        <p><strong>Copyright@NascarTanTeam</strong></p>
+      </footer>
+
+
       </div>
     </>
   );

@@ -1,21 +1,68 @@
-import React, { useState } from "react";
+import React, { useEffect, useReducer, useState } from "react";
 
 import TodoList from "../TodoList";
 import Moodtracker from "./DayviewComp/Moodtracker";
 import Journal from "./DayviewComp/Journal";
-// import DayviewToDoList from "../TodoList";
+
 import ArrowButton from "./DayviewComp/ArrowButton";
 
-export default function Dayview() {
+
+
+
+
+
+
+
+
+// BOOTSTRAP_USER_DATA(selectedDate, currentId)
+export default function Dayview({selectedDate, currentId, nicleyFormattedDate}){
+
+    //collect date and userId
+
 
   const [isJournalOpen, setIsJournalOpen] = useState(true);
+  const [journalOfTheDay, setJournalOfTheDay] = useState({body:"Body", id:currentId, title:"Title", date:selectedDate})
+  const [todosOfTheDay, setTodosOfTheDay] = useState([{item:"Bacon"},{ item:"Eggs"}])
+  
+/////////////////////////////////////////////
+  useEffect(()=>{
+
+    const getData = async()=>{
+      const journalFetch = await fetch(`${process.env.REACT_APP_DATABASE}journals/${currentId}/${selectedDate}`)
+      
+      const journalJSON = await journalFetch.json()
+
+      const todosFetch = await fetch(`${process.env.REACT_APP_DATABASE}todos/${currentId}/${selectedDate}`)
+      const todosJSON = await todosFetch.json()
+      
+      if(journalJSON.payload.length === 0){return}
+
+      setJournalOfTheDay(journalJSON.payload[0])
+      
+      if(todosJSON.payload.length === 0){return}
+      
+      setTodosOfTheDay(todosJSON.payload)
+    }
+
+    getData()
+  },[currentId,selectedDate])
+////////////////////////////////////////
+  // useEffect(()=>{
+  //     getAllDataByUser({selectedDate:selectedDate, currentId:currentId})
+  // },[selectedDate, currentId])
+
+  useEffect(()=>{
+    //if(allDataByUser.journal === {}) return
+    console.log(journalOfTheDay)
+  },[journalOfTheDay])
 
   return (
     <div className="daily-journal">
+
     
     <div className="btn-container">
         <ArrowButton text="previous" />
-        <h2>date x</h2>
+        <h2>{nicleyFormattedDate}</h2>
         <ArrowButton text="next" />
         </div>
 
@@ -54,7 +101,7 @@ export default function Dayview() {
 
       {!isJournalOpen ? (
         <div>
-          <TodoList />
+          <TodoList todos={todosOfTheDay}/>
         </div>
       ) : (
         <></>
@@ -63,7 +110,7 @@ export default function Dayview() {
       {isJournalOpen ? (
         <div className="daily-journal">
           <Moodtracker />
-          <Journal />
+          <Journal journal={journalOfTheDay}/>
         </div>
       ) : (
         <></>
