@@ -28,11 +28,11 @@ export default function Dayview({selectedDate, currentId, nicleyFormattedDate}){
   useEffect(()=>{
 
     const getData = async()=>{
-      const journalFetch = await fetch(`${process.env.REACT_APP_DATABASE}journals/${currentId}/${selectedDate}`)
+      const journalFetch = await fetch(`${process.env.REACT_APP_API}journals/${currentId}/${selectedDate}`)
       
       const journalJSON = await journalFetch.json()
 
-      const todosFetch = await fetch(`${process.env.REACT_APP_DATABASE}todos/${currentId}/${selectedDate}`)
+      const todosFetch = await fetch(`${process.env.REACT_APP_API}todos/${currentId}/${selectedDate}`)
       const todosJSON = await todosFetch.json()
       
       if(journalJSON.payload.length === 0){return}
