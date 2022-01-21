@@ -5,7 +5,7 @@ import { Outlet, Link } from "react-router-dom";
 
 import "./style.css";
 
-function HomePage({selectedDate, setSelectedDate, userData, currentId, setCurrentId, setNicleyFormattedDate}) {
+function HomePage({nicleyFormattedDate, setSelectedDate, userData, currentId, setCurrentId, setNicleyFormattedDate,todaysDate}) {
 
   
 
@@ -13,6 +13,7 @@ function HomePage({selectedDate, setSelectedDate, userData, currentId, setCurren
     <div className="home-page">
 
       <h1> Hello, {userData[0].name}</h1> 
+      <h2> Today is, {todaysDate}</h2> 
 
       {/* Dev Tools remove before merging to main */}
       <span>

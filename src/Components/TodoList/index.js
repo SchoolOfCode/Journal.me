@@ -32,7 +32,7 @@ function reduceList(list, action){
 
 }
 
-export default function ToDoList({todos}) {
+export default function ToDoList({todos, nicleyFormattedDate}) {
     const [input, setInput] = useState("")
     const [list, dispatchList] = useReducer(reduceList, [])
 
@@ -51,7 +51,9 @@ export default function ToDoList({todos}) {
 
   return (
     <div className="todo-list">
+      
       <h1>Assignments/Tasks/Chores</h1>
+      <h2>{nicleyFormattedDate}</h2>
       <input id="text_input"
         value={input}
         onChange={({ target: self }) => {

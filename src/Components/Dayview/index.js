@@ -62,9 +62,11 @@ export default function Dayview({selectedDate, currentId, nicleyFormattedDate}){
     
     <div className="btn-container">
         <ArrowButton text="previous" />
-        <h2>{nicleyFormattedDate}</h2>
+        
         <ArrowButton text="next" />
         </div>
+
+        
 
 
       <button
@@ -99,9 +101,12 @@ export default function Dayview({selectedDate, currentId, nicleyFormattedDate}){
         )}
       </button>
 
+      
+
       {!isJournalOpen ? (
         <div>
-          <TodoList todos={todosOfTheDay}/>
+          
+          <TodoList nicleyFormattedDate={nicleyFormattedDate} todos={todosOfTheDay}/>
         </div>
       ) : (
         <></>
@@ -109,7 +114,8 @@ export default function Dayview({selectedDate, currentId, nicleyFormattedDate}){
 
       {isJournalOpen ? (
         <div className="daily-journal">
-          <Moodtracker />
+          
+          <Moodtracker nicleyFormattedDate={nicleyFormattedDate}/>
           <Journal journal={journalOfTheDay}/>
         </div>
       ) : (
