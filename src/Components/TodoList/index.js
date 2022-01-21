@@ -1,4 +1,4 @@
-import React, {useReducer, useState} from "react";
+import React, {useEffect, useReducer, useState} from "react";
 
 const actions  ={
     ADD_TO_LIST:"ADD_TO_LIST",
@@ -30,9 +30,19 @@ function reduceList(list, action){
 
 }
 
-export default function ToDoList() {
+export default function ToDoList({todos}) {
     const [input, setInput] = useState("")
-    const [list, dispatchList] = useReducer(reduceList, ["bacon","eggs"])
+    const [list, dispatchList] = useReducer(reduceList, [])
+
+
+    useEffect(()=>{
+
+        // console.log(todos)
+        todos.forEach((v)=>{
+            dispatchList({type:actions.ADD_TO_LIST, value:v.item})
+        }
+        )
+    },[todos])
 
 
 
