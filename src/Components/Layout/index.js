@@ -45,13 +45,13 @@ const Layout = () => {
       </span>
 
       <footer>
-        <p3>Created by:</p3><br/>
-        <p4>Callum Hemmingway</p4><br/>
-        <p4>Samira Midgley</p4><br/>
-        <p4>Najma Elmi</p4><br/>
-        <p4>Tan Coding</p4><br/>
+        <p>Created by:</p><br/>
+        <p>Callum Hemming</p><br/>
+        <p>Samira Midgley</p><br/>
+        <p>Najma Elmi</p><br/>
+        <p>Tan Coding</p><br/>
         
-        <p3><strong>Copyright@NascarTanTeam</strong></p3>
+        <p><strong>Copyright@NascarTanTeam</strong></p>
       </footer>
 
       </div>

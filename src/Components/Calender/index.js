@@ -2,20 +2,44 @@ import { useState } from "react";
 import Calendar from "react-calendar";
 import "react-calendar/dist/Calendar.css";
 import moment from "moment";
+import { useNavigate } from "react-router-dom";
 
-function MyCalender() {
-  const [date, setDate] = useState(new Date());
 
-  function changeDate(event) {
-    setDate(event);
-  }
+function MyCalender({setSelectedDate, setNicleyFormattedDate}) {
+
+  let navigate = useNavigate();
+
+ 
+  
+  
+    const [date, setDate] = useState(new Date());
+    
+    function changeDate(event) {
+      setDate(event);
+    }
+  
+    function handleClick() {
+      changeDate()
+     
+      setSelectedDate(String(moment(date).format("DMMYY")))
+      setNicleyFormattedDate(String(moment(date).format("DD-MM-YY")))
+      navigate("/dayview")
+    }
+
+
+ 
+
+ 
 
   return (
     <div className>
-      <Calendar onChange={changeDate} value={date} />
-      <p>You have selected: {moment(date).format("MMMM Do YYYY")}</p>
+      <Calendar onChange={handleClick} value={date} />
     </div>
   );
 }
 
 export default MyCalender;
+
+
+
+
