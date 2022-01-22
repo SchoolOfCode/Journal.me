@@ -26,7 +26,7 @@ export default function App() {
 
   useEffect(()=>{
 
-    
+    console.log(`${process.env.REACT_APP_API}users/${currentId}`)
     fetch(`${process.env.REACT_APP_API}users/${currentId}`)
       .then(res=>res.json())
       .then(res=> updateUserData({newState:res.payload})
