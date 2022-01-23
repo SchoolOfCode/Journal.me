@@ -16,7 +16,7 @@ function reduceUserData(state, actions){
 export default function App() {
   const [currentId, setCurrentId] = useState(1);
   
-  const [selectedDate, setSelectedDate] = useState(new Date())
+  const [selectedDate, setSelectedDate] = useState(moment(new Date()).format("DDMMYY"))
   // const [userData, setUserData] = useState({id: 0, name: 'Default', cohort: 0}); 
   const [userData, updateUserData]= useReducer(reduceUserData, [{name:""}]) 
   const [nicleyFormattedDate, setNicleyFormattedDate] = useState(moment(new Date()).format("DDMMYY"))
@@ -26,7 +26,7 @@ export default function App() {
 
   useEffect(()=>{
 
-    
+    console.log(`${process.env.REACT_APP_API}users/${currentId}`)
     fetch(`${process.env.REACT_APP_API}users/${currentId}`)
       .then(res=>res.json())
       .then(res=> updateUserData({newState:res.payload})
@@ -51,7 +51,7 @@ export default function App() {
             {/* Homepage will have h1 Hello bootcamper, h2 You're on week x, and the calander*/}
             <Route index element={<Homepage todaysDate={todaysDate} nicleyFormattedDate={nicleyFormattedDate} setNicleyFormattedDate={setNicleyFormattedDate} selectedDate={selectedDate} setSelectedDate={setSelectedDate} userData={userData} currentId={currentId} setCurrentId={setCurrentId}/>} />
             {/* Day view will have Mood tracker component and Journal component */}
-            <Route path="dayview" element={<Dayview nicleyFormattedDate={nicleyFormattedDate} selectedDate={selectedDate} currentId={currentId} />} />
+            <Route path="dayview" element={<Dayview setCurrentId={setCurrentId} nicleyFormattedDate={nicleyFormattedDate} selectedDate={selectedDate} currentId={currentId} />} />
             {/* Make a to-do list */}
             <Route path="todolist" element={<TodoList />} />
           </Route>

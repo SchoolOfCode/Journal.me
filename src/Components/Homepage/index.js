@@ -47,7 +47,7 @@ function HomePage({nicleyFormattedDate, setSelectedDate, userData, currentId, se
       <Link to="/dayview">
       <p>Go to today</p>
       </Link>
-      <h3>You're on week x</h3>
+      {/* <h3>You're on week x</h3> */}
       <span style={{display:"flex"}}>
       <MyCalender setNicleyFormattedDate={setNicleyFormattedDate} setSelectedDate={setSelectedDate}/>
 
