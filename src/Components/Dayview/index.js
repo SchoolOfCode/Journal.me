@@ -15,7 +15,7 @@ import ArrowButton from "./DayviewComp/ArrowButton";
 
 
 // BOOTSTRAP_USER_DATA(selectedDate, currentId)
-export default function Dayview({selectedDate, currentId, nicleyFormattedDate}){
+export default function Dayview({selectedDate, currentId, nicleyFormattedDate, setCurrentId}){
 
     //collect date and userId
 
@@ -23,6 +23,7 @@ export default function Dayview({selectedDate, currentId, nicleyFormattedDate}){
   const [isJournalOpen, setIsJournalOpen] = useState(true);
   const [journalOfTheDay, setJournalOfTheDay] = useState({body:"Body", id:currentId, title:"Title", date:selectedDate})
   const [todosOfTheDay, setTodosOfTheDay] = useState([{item:"Bacon"},{ item:"Eggs"}])
+  const [refreshDay, setRefreshDay] = useState(true)
   
 /////////////////////////////////////////////
   useEffect(()=>{
@@ -45,7 +46,7 @@ export default function Dayview({selectedDate, currentId, nicleyFormattedDate}){
     }
 
     getData()
-  },[currentId,selectedDate])
+  },[currentId,selectedDate, refreshDay])
 ////////////////////////////////////////
   // useEffect(()=>{
   //     getAllDataByUser({selectedDate:selectedDate, currentId:currentId})
@@ -114,7 +115,7 @@ export default function Dayview({selectedDate, currentId, nicleyFormattedDate}){
         <div className="daily-journal">
           
           <Moodtracker nicleyFormattedDate={nicleyFormattedDate}/>
-          <Journal journal={journalOfTheDay}/>
+          <Journal refreshDay={refreshDay} setRefreshDay={setRefreshDay} setCurrentId={setCurrentId} journal={journalOfTheDay} currentId={currentId} selectedDate={selectedDate}/>
         </div>
       ) : (
         <></>
